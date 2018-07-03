@@ -1,0 +1,66 @@
+<div class="col-lg-12">
+    <form (ngSubmit)="getQuote(f)" #f="ngForm">
+    <div class="row">
+        <div class="col-lg-6">
+
+            <div class="col-lg-12"align = "left">
+                <label for="fname" align = "right">First Name: </label>
+                <input type="text" id="fname" class="form-control" name="fname" ngModel>
+            </div>
+            <div class="col-lg-12">
+                <label for="lname">Last Name: </label>
+                <input type="text" id="lname" class="form-control" name="lname" ngModel >
+            </div>
+            <div class="col-lg-12">
+
+                <label for="dl">Driver's License: </label>
+                <input type="text" id="dl" class="form-control" name="dl" ngModel>
+            </div>
+            <div class="col-lg-12">
+            <label for="zip">Zip Code: </label>
+            <input type="text" id="zip" class="form-control" name="zip" ngModel >
+            </div>
+        </div>
+        <div class="col-lg-6">
+
+            <div class="col-lg-12"align = "left">
+                <label for="fname" align = "right">Year:</label>
+                <input type="text" id="year" class="form-control" name="year" ngModel>
+            </div>
+            <div class="col-lg-12">
+                <label for="lname">Make: </label>
+                <input type="text" id="make" class="form-control" name="make" ngModel >
+            </div>
+            <div class="col-lg-12">
+
+                <label for="dl">Model: </label>
+                <input type="text" id="model" class="form-control" name="model" ngModel>
+            </div>
+            <div class="col-lg-12">
+                <label for="zip">VIN:</label>
+                <input type="text" id="vin" class="form-control" name="vin" ngModel >
+            </div>
+        </div>
+    </div>
+ <br>
+    <div class="row" class="col-lg-12">
+        <div align="center">
+            <button class="btn btn-success" type="submit">Quote</button>
+        </div>
+    </div>
+    </form>
+ <br>
+
+    <div class="row">
+        <div class="col-lg-6" align="center" style="background-color:lightblue">
+        <h1>Standard</h1> (Comprehensive, Road Side Assitance, Rental Car) <hr>
+        <font size="300" color="blue">{{ quoteS.m_premium }}</font>
+
+        </div>
+
+        <div class="col-lg-6" align="center" style="background-color:lightgreen">
+        <h1>Premium</h1>  (Standard + Dedicated Help Line, Elite Membership)    <hr>
+        <font size="300" color="green">{{ quoteP.m_premium }}</font>
+        </div>
+    </div>
+</div>
